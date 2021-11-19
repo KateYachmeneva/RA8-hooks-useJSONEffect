@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import Success from "./components/Success";
+import Error from "./components/Error";
+import Loading from "./components/Loading";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container pt-5">
+      <div className="alert alert-primary text-center" role="alert">
+        <Success/>
+      </div>
+      <div className="alert alert-danger text-center" role="alert">
+        <Error />
+      </div>
+      <div className="alert alert-info text-center" role="alert">
+        <Loading/>
+      </div>
     </div>
   );
 }
